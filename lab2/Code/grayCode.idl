@@ -1,0 +1,5 @@
+interface Solution {
+    void Solution();
+    long getTime();
+    DOMString grayCode(long val);
+};

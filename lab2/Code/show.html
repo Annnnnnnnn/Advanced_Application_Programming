@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Get the Value of Text Input Field in JavaScript</title>
+</head>
+<body>
+	<p>An n-bit gray code sequence is a sequence of 2n integers where:</p>
+	<p>Every integer is in the inclusive range [0, 2n - 1],<br>The first integer is 0,<br>An integer appears no more than once in the sequence,<br>The binary representation of every pair of adjacent integers differs by exactly one bit, and<br>The binary representation of the first and last integers differs by exactly one bit.</p>
+	<p id="instruction">Type a integer, return any valid n-bit gray code sequence.</p>
+	<input type="text" placeholder="Type something..." id="myInput">
+	<button type="button" onclick="getInputValue();">Get Value</button>
+    <p id="demo">The results will be shown here</p>
+    <script type="text/JavaScript" src="output.js"></script>
+	<script>
+		function insertAfter( newElement, targetElement ){ 
+    		var parent = targetElement.parentNode; 
+    		if( parent.lastChild == targetElement ){ 
+        			parent.appendChild( newElement, targetElement ); 
+    		}else{ 
+        		parent.insertBefore( newElement, targetElement.nextSibling ); 
+    		}
+		}
+
+        function getInputValue(){
+            // Selecting the input element and get its value 
+            var inputVal = document.getElementById("myInput").value;
+            var sol = new Module.Solution();
+			var lastObj = document.getElementById("demo");
+			for (var i=1; i<=10; i++)
+			{ 
+				let tStart = new Date().valueOf();
+				console.log(tStart);
+				var ret = sol.grayCode(inputVal);
+				let tEnd = new Date().valueOf();
+				console.log(tEnd);
+				let t = tEnd - tStart;
+				var p = document.createElement("p");
+				p.innerHTML = "Round" + i + ": "  + ret + "  " + "Time: " + t + "ms";
+				insertAfter(p, lastObj);
+				lastObj = p;
+			}
+        }
+    </script>
+</body>
+</html>
