@@ -1,0 +1,5 @@
+Time(ms): [449, 436, 431, 433, 438, 437, 432, 432, 432, 434]
+Mean: 435.4
+variance: 25.640
+Standard deviation: 5.064
+95% confidence interval: (432.262, 438.538)

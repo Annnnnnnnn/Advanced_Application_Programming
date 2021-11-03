@@ -1,0 +1,5 @@
+interface Solution {
+    void Solution();
+    boolean isprime();
+    DOMString grayCode(long val);
+};
